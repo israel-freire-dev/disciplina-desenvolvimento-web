@@ -1,0 +1,193 @@
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* O .container limita a largura do conteúdo e o centraliza.
+  Usado no cabeçalho, main e rodapé.
+*/
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- CABEÇALHO (Header) --- */
+.cabecalho {
+    background-color: #004d00; /* Um verde escuro "institucional" */
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 5px solid #008000; /* Verde mais claro */
+}
+
+/* Aqui usamos Flexbox para alinhar a logo (esquerda) e a pesquisa (direita)
+  como solicitado.
+*/
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between; /* Itens jogados para as pontas */
+    align-items: center;          /* Itens alinhados verticalmente */
+}
+
+/* .cabecalho .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+} */
+
+.logo-img {
+    /* Define uma altura máxima para a logo */
+    max-height: 100px; 
+    
+    /* O width: auto faz ela diminuir proporcionalmente */
+    width: auto; 
+    
+    /* Isso ajuda a alinhar a imagem verticalmente com a barra de pesquisa */
+    vertical-align: middle; 
+}
+
+.cabecalho .pesquisa input[type="search"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.cabecalho .pesquisa button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #008000;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    margin-left: -5px; /* Junta o botão ao input */
+}
+
+/* --- CONTEÚDO PRINCIPAL (Main) --- */
+main {
+    padding: 30px 0;
+}
+
+.artigo {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.artigo h2 {
+    color: #004d00;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+/* Estilo do link para a página de formulário */
+.btn-link {
+    display: inline-block;
+    background-color: #008000;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #005a00;
+}
+
+/* --- RODAPÉ (Footer) --- */
+.rodape {
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* --- ESTILOS DA PÁGINA DE FORMULÁRIO --- */
+.navegacao-voltar {
+    margin-bottom: 20px;
+}
+
+.navegacao-voltar a {
+    text-decoration: none;
+    color: #005a00;
+    font-weight: bold;
+}
+
+.formulario-demo {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.campo-form {
+    margin-bottom: 20px;
+}
+
+.campo-form > label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.campo-form legend {
+    display: block;
+    margin-bottom: 10px; /* Aumentei um pouco a margem */
+    font-weight: bold;
+    color: #555;
+}
+
+/* Faz campos de texto, email, select, etc., ocuparem 100% da largura */
+.campo-form input[type="text"],
+.campo-form input[type="email"],
+.campo-form input[type="password"],
+.campo-form input[type="date"],
+.campo-form input[type="number"],
+.campo-form select,
+.campo-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+}
+
+/* Ajuste para radios e checkboxes não ocuparem 100% */
+.campo-form input[type="radio"],
+.campo-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.campo-form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.botoes-form button {
+    background-color: #008000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.botoes-form button[type="reset"] {
+    background-color: #777;
+}
+
+.botoes-form button:hover {
+    opacity: 0.9;
+}

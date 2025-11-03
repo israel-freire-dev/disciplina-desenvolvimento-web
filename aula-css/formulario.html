@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Formulários</title>
+    <link rel="shortcut icon" href="images/favicon-ifbaiano.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <img src="images/marca-if-baiano-horizontal-branca.png" alt="Logo Institucional do IF Baiano" class="logo-img">
+            </div>
+            <div class="pesquisa">
+                <form action="#" method="get">
+                    <input type="search" name="q" placeholder="Buscar no portal...">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <nav class="navegacao-voltar">
+            <a href="index.html">&larr; Voltar para a Home</a>
+        </nav>
+
+        <h1>Formulário de Demonstração</h1>
+        <p>Esta página contém os principais elementos de formulário do HTML.</p>
+
+        <form class="formulario-demo" action="#" method="post">
+            
+            <div class="campo-form">
+                <label for="nome">Nome Completo (text):</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="email">Email (email):</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="senha">Senha (password):</label>
+                <input type="password" id="senha" name="senha">
+            </div>
+
+            <div class="campo-form">
+                <label for="data_nasc">Data de Nascimento (date):</label>
+                <input type="date" id="data_nasc" name="data_nasc">
+            </div>
+
+            <div class="campo-form">
+                <label for="idade">Idade (number):</label>
+                <input type="number" id="idade" name="idade" min="18" max="100">
+            </div>
+
+            <div class="campo-form">
+                <label for="campus">Campus (select):</label>
+                <select id="campus" name="campus">
+                    <option value="">Selecione um campus</option>
+                    <option value="lapa">Lapa</option>
+                    <option value="guanambi">Guanambi</option>
+                    <option value="itapetinga">Itapetinga</option>
+                </select>
+            </div>
+
+            <div class="campo-form">
+                <fieldset>
+                    <legend>Modalidade (radio):</legend>
+                    <input type="radio" id="subsequente" name="modalidade" value="sub">
+                    <label for="subsequente">Subsequente</label>
+                    <br>
+                    <input type="radio" id="integrado" name="modalidade" value="int">
+                    <label for="integrado">Integrado</label>
+                </fieldset>
+            </div>
+
+            <div class="campo-form">
+                <fieldset>
+                    <legend>Interesses (checkbox):</legend>
+                    <input type="checkbox" id="ti" name="interesse_ti" value="ti">
+                    <label for="ti">Tecnologia</label>
+                    <br>
+                    <input type="checkbox" id="agro" name="interesse_agro" value="agro">
+                    <label for="agro">Agropecuária</label>
+                </fieldset>
+            </div>
+
+            <div class="campo-form">
+                <label for="mensagem">Mensagem (textarea):</label>
+                <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+            </div>
+
+            <div class="campo-form">
+                <label for="documento">Documento (file):</label>
+                <input type="file" id="documento" name="documento">
+            </div>
+
+            <div class="botoes-form">
+                <button type="submit">Enviar (submit)</button>
+                <button type="reset">Limpar (reset)</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>© 2025 Portal Institucional Simples - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
