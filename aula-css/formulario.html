@@ -1,120 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página de Formulários</title>
-    <link rel="shortcut icon" href="images/favicon-ifbaiano.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link
+      rel="shortcut icon"
+      href="images/favicon-ifbaiano.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="cabecalho">
-        <div class="container">
-            <div class="logo">
-                <img src="images/marca-if-baiano-horizontal-branca.png" alt="Logo Institucional do IF Baiano" class="logo-img">
-            </div>
-            <div class="pesquisa">
-                <form action="#" method="get">
-                    <input type="search" name="q" placeholder="Buscar no portal...">
-                    <button type="submit">Buscar</button>
-                </form>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="images/marca-if-baiano-horizontal-branca.png"
+            alt="Logo Institucional do IF Baiano"
+            class="logo-img"
+          />
         </div>
+        <div class="pesquisa">
+          <form action="#" method="get">
+            <input type="search" name="q" placeholder="Buscar no portal..." />
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
     </header>
 
     <main class="container">
-        
-        <nav class="navegacao-voltar">
-            <a href="index.html">&larr; Voltar para a Home</a>
-        </nav>
+      <nav class="navegacao-voltar">
+        <a href="index.html">&larr; Voltar para a Home</a>
+      </nav>
 
-        <h1>Formulário de Demonstração</h1>
-        <p>Esta página contém os principais elementos de formulário do HTML.</p>
+      <h1>Formulário de Demonstração</h1>
+      <p>Esta página contém os principais elementos de formulário do HTML.</p>
 
-        <form class="formulario-demo" action="#" method="post">
-            
-            <div class="campo-form">
-                <label for="nome">Nome Completo (text):</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-
-            <div class="campo-form">
-                <label for="email">Email (email):</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="campo-form">
-                <label for="senha">Senha (password):</label>
-                <input type="password" id="senha" name="senha">
-            </div>
-
-            <div class="campo-form">
-                <label for="data_nasc">Data de Nascimento (date):</label>
-                <input type="date" id="data_nasc" name="data_nasc">
-            </div>
-
-            <div class="campo-form">
-                <label for="idade">Idade (number):</label>
-                <input type="number" id="idade" name="idade" min="18" max="100">
-            </div>
-
-            <div class="campo-form">
-                <label for="campus">Campus (select):</label>
-                <select id="campus" name="campus">
-                    <option value="">Selecione um campus</option>
-                    <option value="lapa">Lapa</option>
-                    <option value="guanambi">Guanambi</option>
-                    <option value="itapetinga">Itapetinga</option>
-                </select>
-            </div>
-
-            <div class="campo-form">
-                <fieldset>
-                    <legend>Modalidade (radio):</legend>
-                    <input type="radio" id="subsequente" name="modalidade" value="sub">
-                    <label for="subsequente">Subsequente</label>
-                    <br>
-                    <input type="radio" id="integrado" name="modalidade" value="int">
-                    <label for="integrado">Integrado</label>
-                </fieldset>
-            </div>
-
-            <div class="campo-form">
-                <fieldset>
-                    <legend>Interesses (checkbox):</legend>
-                    <input type="checkbox" id="ti" name="interesse_ti" value="ti">
-                    <label for="ti">Tecnologia</label>
-                    <br>
-                    <input type="checkbox" id="agro" name="interesse_agro" value="agro">
-                    <label for="agro">Agropecuária</label>
-                </fieldset>
-            </div>
-
-            <div class="campo-form">
-                <label for="mensagem">Mensagem (textarea):</label>
-                <textarea id="mensagem" name="mensagem" rows="5"></textarea>
-            </div>
-
-            <div class="campo-form">
-                <label for="documento">Documento (file):</label>
-                <input type="file" id="documento" name="documento">
-            </div>
-
-            <div class="botoes-form">
-                <button type="submit">Enviar (submit)</button>
-                <button type="reset">Limpar (reset)</button>
-            </div>
-
-        </form>
-
-    </main>
-
-    <footer class="rodape">
-        <div class="container">
-            <p>© 2025 Portal Institucional Simples - Todos os direitos reservados.</p>
+      <form id="formsRegister" class="formulario-demo">
+        <div class="campo-form">
+          <label for="nome">Nome Completo (text):</label>
+          <input type="text" id="nome" name="nome" required />
         </div>
-    </footer>
 
-</body>
+        <div class="campo-form">
+          <label for="email">Email (email):</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="campo-form">
+          <label for="senha">Senha (password):</label>
+          <input type="password" id="senha" name="senha" />
+        </div>
+
+        <div class="campo-form">
+          <label for="data_nasc">Data de Nascimento (date):</label>
+          <input type="date" id="data_nasc" name="data_nasc" />
+        </div>
+
+        <div class="campo-form">
+          <label for="idade">Idade (number):</label>
+          <input type="number" id="idade" name="idade" min="18" max="100" />
+        </div>
+
+        <div class="campo-form">
+          <label for="campus">Campus (select):</label>
+          <select id="campus" name="campus">
+            <option value="">Selecione um campus</option>
+            <option value="lapa">Lapa</option>
+            <option value="guanambi">Guanambi</option>
+            <option value="itapetinga">Itapetinga</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <fieldset>
+            <legend>Modalidade (radio):</legend>
+            <input
+              type="radio"
+              id="subsequente"
+              name="modalidade"
+              value="subsequente"
+            />
+            <label for="subsequente">Subsequente</label>
+            <br />
+            <input
+              type="radio"
+              id="integrado"
+              name="modalidade"
+              value="integrado"
+            />
+            <label for="integrado">Integrado</label>
+          </fieldset>
+        </div>
+
+        <div class="campo-form">
+          <fieldset>
+            <legend>Interesses (checkbox):</legend>
+            <input
+              type="checkbox"
+              id="ti"
+              name="interesse"
+              value="tecnologia"
+            />
+            <label for="ti">Tecnologia</label>
+            <br />
+            <input
+              type="checkbox"
+              id="agro"
+              name="interesse"
+              value="agropecuaria"
+            />
+            <label for="agro">Agropecuária</label>
+          </fieldset>
+        </div>
+
+        <div class="campo-form">
+          <label for="mensagem">Mensagem (textarea):</label>
+          <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+        </div>
+
+        <div class="campo-form">
+          <label for="documento">Documento (file):</label>
+          <input type="file" id="documento" name="documento" />
+        </div>
+
+        <div class="botoes-form">
+          <button type="submit">Enviar (submit)</button>
+          <button type="reset">Limpar (reset)</button>
+        </div>
+      </form>
+    </main>
+    <div class="formRegisterContainer">
+      <table
+        id="formsTableRegister"
+        style="width: 50%"
+        border-collapse:
+        collapse;
+      >
+        <thead>
+          <tr>
+            <th>nome</th>
+            <th>email</th>
+            <th>senha</th>
+            <th>data_nasc</th>
+            <th>idade</th>
+            <th>campus</th>
+            <th>modalidade</th>
+            <th>interesse</th>
+            <th>mensagem</th>
+            <th>documento</th>
+          </tr>
+        </thead>
+        <tbody id="bodyTableRegister"></tbody>
+      </table>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById("formsRegister");
+          const bodyTable = document.getElementById("bodyTableRegister");
+
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            const data_nascimento = document.getElementById("data_nasc").value;
+            const idade = document.getElementById("idade").value;
+            const campus = document.getElementById("campus").value;
+            const modalidade = document.querySelector(
+              'input[name="modalidade"]:checked'
+            ).value;
+            const mensagem = document.getElementById("mensagem").value;
+            const caixasMarcadas = selectedCheckBox(
+              (input = document.querySelectorAll(
+                'input[name="interesse"]:checked'
+              ))
+            );
+            const inputArquivo = document.getElementById("documento");
+            const nomeArquivo = inputArquivo.files[0]
+              ? inputArquivo.files[0].name
+              : "Nenhum";
+            const novaLinha = document.createElement("tr");
+
+            novaLinha.innerHTML = `
+                    <td style="padding: 8px; border: 1px solid #ddd;">${nome}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${email}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${senha}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${data_nascimento}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${idade}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${campus}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${modalidade}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${caixasMarcadas}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${mensagem}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">${nomeArquivo}</td>
+                    `;
+
+            bodyTable.appendChild(novaLinha);
+            form.reset();
+          });
+
+          function selectedCheckBox() {
+            let caixasMarcadas = input;
+
+            let valoresInteresse = [];
+            caixasMarcadas.forEach(function (checkbox) {
+              valoresInteresse.push(checkbox.value);
+            });
+            let interesse;
+            if (valoresInteresse.length > 0) {
+              interesse = valoresInteresse.join(", ");
+            } else {
+              interesse = "Nenhum";
+            }
+            return interesse;
+          }
+        });
+      </script>
+    </div>
+    <footer class="rodape">
+      <div class="container">
+        <p>
+          © 2025 Portal Institucional Simples - Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

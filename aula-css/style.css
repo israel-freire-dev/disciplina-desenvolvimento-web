@@ -191,3 +191,36 @@ main {
 .botoes-form button:hover {
     opacity: 0.9;
 }
+
+
+table, th, td {
+  padding: 10px;
+  border:1px solid black;
+  border-collapse: collapse;
+  cursor: copy;
+  
+}
+
+table{
+    width: 70vw;
+    border-radius: 4px;
+    border:1px solid black;
+    overflow: hidden;
+    
+}
+
+th{
+    background: lightgrey;
+    border-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.formRegisterContainer{
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
