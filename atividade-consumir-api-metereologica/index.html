@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima em Itapetinga</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f2f5;
+      }
+      .weather-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        width: 300px;
+        text-align: center;
+      }
+      .weather-card h2 {
+        margin-top: 0;
+        color: #333;
+      }
+      .weather-card .temperature {
+        font-size: 3rem; /* 48px */
+        font-weight: bold;
+        color: #1a73e8;
+      }
+      .weather-card .details {
+        margin-top: 20px;
+        font-size: 1rem; /* 16px */
+        color: #555;
+        text-align: left;
+      }
+      .weather-card .details p {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather-card">
+      <h2>Clima em Itapetinga, BA</h2>
+
+      <div id="loading">Carregando dados...</div>
+
+      <div class="temperature" id="temp"></div>
+
+      <div class="details">
+        <p id="humidity"></p>
+        <p id="wind"></p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const latitude = -15.247;
+        const longitude = -40.248;
+
+        const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`;
+
+        const tempEl = document.getElementById("temp");
+        const humidityEl = document.getElementById("humidity");
+        const windEl = document.getElementById("wind");
+        const loadingEl = document.getElementById("loading");
+
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+
+            const current = data.current;
+
+            loadingEl.style.display = "none";
+
+            tempEl.textContent = `${Math.round(current.temperature_2m)}°C`;
+            humidityEl.textContent = `Umidade: ${Math.round(
+              current.relative_humidity_2m
+            )}%`;
+            windEl.textContent = `Vento: ${current.wind_speed_10m} km/h`;
+          })
+          .catch((error) => {
+            console.error("Erro ao buscar dados do tempo:", error);
+            loadingEl.textContent = "Não foi possível carregar o clima.";
+          });
+      });
+    </script>
+  </body>
+</html>
